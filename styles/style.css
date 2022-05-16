@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+
+}
+
+#header {
+    background-color: lightgrey;
+    width: 100%;
+    min-height: 90vh;
+    /* height: 100vh; */
+}
+.logo {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 25px;
+}
+.navbar {
+    margin: 20px 0;
+    position: fixed;
+    width: 100%;
+}
+.container {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF644E;
+    padding: 5px 60px;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+.icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	.logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	.menu {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	.menu a {
+		font-size: 20px;
+	}
+	nav :checked ~ .menu {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+/* Contact page */
+#contact{
+    padding: 100px 50px;
+    background-color: white;
+    width: 100%; 
+    flex-wrap: wrap;
+}
+.contact-info {
+    font-weight: bold;
+    text-align: center;
+}
+.contact-info h1{
+    font-size: 50px;
+}
+.contact-info p{
+    font-size: 25px;
+    color: #FF644E;
+    margin-bottom: 60px;
+}
+.row4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contact-item {
+    /* flex: 1; */
+    text-align: center;
+    margin: 30px;
+}
+/* Project Page */
+#projects{
+    padding: 100px 50px;
+    background-color: lightgrey;
+    width: 100%;
+    /* height: 100vh; */
+}
+.project-info {
+    font-weight: bold;
+    text-align: center;
+}
+.project-info h1{
+    font-size: 50px;
+}
+.project-info p{
+    font-size: 25px;
+    color: #FF644E;
+    margin-bottom: 60px;
+}
+.row2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project-item {
+    /* flex: 1; */
+    text-align: center;
+    background-color: #5E5E5E;
+    padding: 30px;
+    width: 270px;
+    height: 300px;
+    margin: 50px;
+    /* flex-wrap: wrap;
+    text-align: justify; */
+}
+.project-item a{
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+}
+.project-item p{
+    color: white;
+}
+.project-item-no {
+    flex: 1;
+    text-align: center;
+    background-color: lightgray;
+    
+}
+
+/* home page  */
+.home-text h3,p{
+    font-size: 25px;
+}
+.home-text h1{
+    font-size: 44px;
+    font-weight: bold;
+}
+.home-text p{
+    color: rgb(80, 79, 79);
+}
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.home-text {
+    /* flex: 2; */
+    margin-top: 100px;
+    max-width: 100%;
+    padding: 100px;
+}
+.home-image {
+    /* flex: 1; */
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+span {
+    color: #FF644E;
+} 
+.home-image img{
+    height: 400px;
+    
+}
+#borderimg {
+    border: 0px solid transparent;
+    padding: 40px;
+    border-image-source: url(/images/border.png);
+    border-image-repeat: round;
+    border-image-slice:90;
+    border-image-width: 40px;
+}
+.css{
+    background-color: white;
+    width: 100%;
+    height: 15vh;
+}
+.triangle {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    background-color: lightgrey;
+    clip-path: polygon(50% 0%, 100% 0, 50% 100%, 0 0);
+}
+/* Skills Page  */
+#skills{
+    padding: 100px 50px;
+    background-color: white;
+    width: 100%;
+    /* height: 100vh;  */
+}
+.skill-info {
+    font-weight: bold;
+    text-align: center;
+}
+.skill-info h1{
+    font-size: 50px;
+}
+.row3 {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skill-item {
+    /* flex: 1; */
+    background-color: #5E5E5E;
+    padding: 30px;
+    text-align: justify;
+    width: 620px;
+    /* height: 600px; */
+}
+
+.skill-item p,h2{
+    color: white;
+    /* padding-bottom: 25px;
+    padding-top: 25px; */
+    padding: 25px;
+    /* line-height: 35px; */
+}
+.skill-percent-outer {
+    width: 100%; 
+    background-color: white; 
+    display: flex;
+}
+
+.skills-bootstrap {
+    text-align: right;  
+    color: white;
+    width: 60%; 
+    background-color: #FF644E;
+    
+}
+.skills-html {
+    text-align: right;  
+    color: white;
+    width: 90%; 
+    background-color: #FF644E;
+}
+.skills-css {
+    text-align: right;  
+    color: white;
+    width: 85%; 
+    background-color: #FF644E;
+}
+.skills-javascript {
+    text-align: right;  
+    color: white;
+    width: 85%; 
+    background-color: #FF644E;
+}
+.skills-jquery {
+    text-align: right;  
+    color: white;
+    width: 80%; 
+    background-color: #FF644E;
+}
+
+/* Footer */
+.footer{
+    padding: 40px 0;
+    background-color: #FF644E;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+
+}
+.footer .social a{
+    font-size: 24px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+
+}
+.footer ul{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 18px;
+    list-style: none;
+    line-height: 1.6;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
